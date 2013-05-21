@@ -1,0 +1,29 @@
+<%= form_for(@manage_article) do |f| %>
+  <% if @manage_article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@manage_article.errors.count, "error") %> prohibited this manage_article from being saved:</h2>
+
+      <ul>
+      <% @manage_article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :标题 %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :分类 %><br />
+    <%= f.text_field :sort %>
+  </div>
+  <div class="field">
+    <%= f.label :内容 %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<% provide(:title, "文章信息") %>
+<div class="hero-unit">
+<p>
+  	<b>标题:</b>
+ 	<%= @manage_article.title %>
+</p>
+
+<p>
+  <b>分类:</b>
+  <%= @manage_article.sort %>
+</p>
+
+<p>
+  <b>内容:</b>
+  <%= @manage_article.content %>
+</p>
+
+<br /> 
+<button type="button" class="btn"><%= link_to '编辑', edit_manage_article_path(@manage_article) %></button> |
+<button type="button" class="btn"><%= link_to '返回', manage_articles_path %></button>
+
+</div>
+

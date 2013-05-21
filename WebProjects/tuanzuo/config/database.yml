@@ -1,0 +1,9 @@
+development:
+  adapter: mysql2
+  database: tuanuo/development
+  pool: 5
+  timeout: 5000
+  username: root
+  password: brysjhhrhlmysql
+  encoding: utf8
+  host: localhost

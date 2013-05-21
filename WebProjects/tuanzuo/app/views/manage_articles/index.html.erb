@@ -1,0 +1,29 @@
+<% provide(:title, "Manage_article") %>
+<div class="hero-unit">
+  <h1>文章列表</h1>
+  <section id="tables">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>标题</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @manage_articles.each do |manage_article| %>
+      <tr>
+       <th><%= manage_article.title %></th>
+       <th><%= manage_article.content %></th>
+       <th><%= link_to '详情', manage_article %></th>
+       <th><%= link_to '编辑', edit_manage_article_path(manage_article) %></th>
+       <th><%= link_to '删除', manage_article, method: :delete, data: { confirm: 'Are you sure?' } %></th>
+     </tr>
+     <% end %>
+     </tbody>
+    </table>
+  </section>
+  <br />
+  <button type="button" class="btn"><%= link_to '添加新文章', new_manage_article_path %></button>
+</div>
+
+
